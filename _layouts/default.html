@@ -5,11 +5,9 @@
   {%- include head.html -%}
 
   <body>
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
+    <main class="page-content {% if page.home == true %}home{% endif %}" aria-label="Content">
+        {%- include navbar.html -%}
         <div class="header">
-          <a href="/"><h1 class="profile-name">LEHS</h1></a> 
-
           <div class="pure-menu pure-menu-horizontal pure-menu-scrollable">
               <ul class="pure-menu-list">
                   {% for page in site.data.navigation %}
@@ -20,14 +18,12 @@
         </div>
 
         {% if page.center == true %}
-            <div class="content" style="text-align: center;">
+        <div class="content" style="text-align: center;">
         {% else %}
-            <div class="content">
+        <div class="content">
         {% endif %}
           {{ content }}
         </div>
-
-      </div>
     </main>
   </body>
 
