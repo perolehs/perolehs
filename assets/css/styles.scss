@@ -2,6 +2,7 @@
 ---
 @import 'navbar';
 @import 'transforms';
+@import 'colors';
 
 .home {
     background-image: url('../images/open_universe.png');
@@ -17,7 +18,7 @@
     color: $color-light;
     
     li {
-        border-bottom: solid 2px transparentize($color: $color-light, $amount: 0.5);
+        border-bottom: solid 2px $color-secondary;
         a {
             color: transparentize($color: $color-light, $amount: 0.1);
             font-size: 1.1em;

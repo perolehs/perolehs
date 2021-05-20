@@ -38,8 +38,12 @@
   </header>
 
   <ul class="menu-list">
-    {% for page in site.data.navigation %}
-    <li><a href="{{ page.link | relative_url }}" class="pure-menu-link">{{ page.name }}</a></li>
+    {% for nav in site.data.navigation %}
+    {% if page.title == nav.name %}
+    <li><a class="text-secondary pure-menu-link">{{ nav.name }}</a></li>
+    {% else %}
+    <li><a href="{{ nav.link | relative_url }}" class="pure-menu-link {% if page.title != 'Home' %}text-dark{% endif %}">{{ nav.name }}</a></li>
+    {% endif %}
     {% endfor %}
   </ul>
 </menu>
