@@ -1,5 +1,5 @@
 <header class="backdrop-blur navbar">
-  <span class='hamburger cursor-pointer'>
+  <span class='hamburger cursor-pointer none-desktop'>
     <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path d="M2 3H14V4H2V3Z" fill="black" />
       <path d="M2 12H14V13H2V12Z" fill="black" />
@@ -7,10 +7,24 @@
       <path d="M2 9H14V10H2V9Z" fill="black" />
     </svg>
   </span>
-  <span>L</span>
+  {% if page.home %}
+  <span class="text-big font-staat">L</span>
+  {% else %}
+  <span>{{page.title}}</span>
+  {% endif %}
+
+  <menu class="none-phone">
+    {% for nav in site.data.navigation %}
+    {% if page.title == nav.name %}
+    <div><a class="text-secondary">{{ nav.name }}</a></div>
+    {% else %}
+    <div><a href="{{ nav.link | relative_url }}" class="">{{ nav.name }}</a></div>
+    {% endif %}
+    {% endfor %}
+  </menu>
 </header>
 
-<menu type="toolbar" class="backdrop-blur w-full" id="menu-mobile">
+<menu type="toolbar" class="backdrop-blur w-full none-desktop" id="menu-mobile" hidden>
   <header class="backdrop-blur navbar">
     <span class='hamburger cursor-pointer'>
       <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -20,15 +34,13 @@
         <path d="M2 9H14V10H2V9Z" fill="black" />
       </svg>
     </span>
-    <span>MENU</span>
+    <span>Menu</span>
   </header>
 
-  <ul>
-    <li>a</li>
-    <li>b</li>
-    <li>c</li>
-    <li>d</li>
-    <li>e</li>
+  <ul class="menu-list">
+    {% for page in site.data.navigation %}
+    <li><a href="{{ page.link | relative_url }}" class="pure-menu-link">{{ page.name }}</a></li>
+    {% endfor %}
   </ul>
 </menu>
 
@@ -40,6 +52,6 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     Array.from(document.getElementsByClassName('hamburger'))
-      .forEach(el=>el.addEventListener('click', toggleEl))
+      .forEach(el => el.addEventListener('click', toggleEl))
   })
 </script>

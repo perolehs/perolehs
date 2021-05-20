@@ -11,6 +11,23 @@
     color: $color-light;
 }
 
+.menu-list {
+    list-style: none;
+    padding: 0.5em 2.4em;
+    color: $color-light;
+    
+    li {
+        border-bottom: solid 2px transparentize($color: $color-light, $amount: 0.5);
+        a {
+            color: transparentize($color: $color-light, $amount: 0.1);
+            font-size: 1.1em;
+            letter-spacing: 0.7px;
+            padding: 0.8em 0em;
+            margin: 0.5em 0 0 0;
+        }
+    }
+}
+
 body {
     padding: 0;
     font-family: 'Lato', sans-serif;

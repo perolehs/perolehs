@@ -6,3 +6,16 @@
 .cursor-pointer {
   cursor: pointer;
 }
+
+.none-phone {
+  @media screen and (max-width:$mobile) {
+    display: none !important;
+  }
+}
+
+.none-desktop {
+  @media screen and (min-width:$mobile) {
+    display: none !important;
+  }
+}
+

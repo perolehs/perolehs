@@ -7,16 +7,7 @@
   <body>
     <main class="page-content {% if page.home == true %}home{% endif %}" aria-label="Content">
         {%- include navbar.html -%}
-        <div class="header">
-          <div class="pure-menu pure-menu-horizontal pure-menu-scrollable">
-              <ul class="pure-menu-list">
-                  {% for page in site.data.navigation %}
-                    <li class="pure-menu-item"><a href="{{ page.link | relative_url }}" class="pure-menu-link">{{ page.name }}</a></li>
-                  {% endfor %}
-              </ul>
-          </div>
-        </div>
-
+ 
         {% if page.center == true %}
         <div class="content" style="text-align: center;">
         {% else %}

@@ -2,36 +2,48 @@
 @import 'fonts';
 
 .navbar {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    background-color: transparentize($color: $color-primary, $amount: 0.1);
     height: 40px;
-    font-family: 'Staatliches', cursive;
-
+    padding: 0 20px;
+    font-size: 1.1em;
+    background-color: transparentize($color: $color-primary, $amount: 0.2);
     color: $color-light;
-    font-size: 32px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: $mobile){
+        justify-content: space-between;
+    }
 
     .hamburger {
+        left: 0;
+        margin-left: 20px;
         display: flex;
         position: absolute;
-        align-items: center;
-        margin-left: 20px;
-        left: 0;
-        height: 100%;
 
         path {
             fill: $color-light;
         }
     }
+
+    menu {
+        gap: 3em;
+        font-size: 0.9em;
+        display: flex;
+        
+        a {
+            color: transparentize($color: $color-light, $amount: 0.1);
+        }
+    }
 }
 
 #menu-mobile {
-    position: absolute;
     height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
     left: 0;
     top: 0;
+    position: absolute;
 }
