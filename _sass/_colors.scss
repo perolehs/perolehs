@@ -1,3 +1,21 @@
+@import "variables";
+
+
+.text-light {
+  color: $color-light;
+}
+.text-secondary {
+  color: $color-secondary !important;
+}
+
+.text-dark {
+  color: $color-dark !important;
+}
+
 .line-dark {
-    border-color:$color-dark !important;
+  border-color: $color-dark !important;
+}
+
+.bg-thirty {
+  background-color: $color-thirty;
 }

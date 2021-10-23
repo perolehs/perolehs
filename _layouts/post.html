@@ -1,11 +1,15 @@
 ---
 layout: default
 ---
-
-<h2>{{ page.title }}</h2>
-<span class="post-date">{{ page.date | date: "%A %B %-d, %Y" }}</span>
-
-{{ content }}
+<div class="title-post-wrapper">
+  <div class="py-8">
+    <h2 class="text-light" >{{ page.title }}</h2>
+    <span class="post-date">{{ page.date | date: "%A %B %-d, %Y" }}</span>
+  </div>
+</div>
+<div class="py-8">
+  {{ content }}
+</div>
 
 <hr>
 

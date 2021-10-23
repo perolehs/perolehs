@@ -8,6 +8,10 @@ github_username: perolehs
 # theme: minima
 excerpt_separator: <!--more-->
 plugins:
+  - jekyll-paginate-v2
   - jekyll-feed
 sass:
   style: compressed
+pagination:
+  enabled: true
+  per_page: 5

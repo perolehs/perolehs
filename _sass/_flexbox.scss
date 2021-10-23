@@ -1,0 +1,9 @@
+.d-flex {
+  display: flex;
+  &.justify-center {
+    justify-content: center;
+  }
+  &.gap-small {
+    gap: 1rem;
+  }
+}

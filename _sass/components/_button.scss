@@ -1,0 +1,22 @@
+
+@import '../colors';
+
+a.badge {
+  padding: 8px 10px;
+  font-size: 12px;
+  min-width: 36px;
+  text-align: center;
+
+  background-color: transparentize($color: $color-primary, $amount: .65);
+  border-radius: 65px;
+  color: $color-light;
+  transition: background-color 0.5s;
+
+  &:hover{
+    color: $color-light;
+    background-color: transparentize($color: $color-primary, $amount: .4);
+  }
+  &.active {
+    background: $color-primary;
+  }
+}

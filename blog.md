@@ -2,5 +2,7 @@
 layout: default
 title: Blog
 permalink: /blog/
+pagination: 
+  enabled: true
 ---
-{% for post in site.posts limit:5 %} {% include preview.md post=post %} {% endfor %}
+{% include blogView.md paginator=paginator%}
