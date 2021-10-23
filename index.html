@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en"><title>LEHS's web</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/assets/css/styles.css"><body>
+    <main class="page-content home" aria-label="Content"><header class="backdrop-blur navbar">
+  <span class='hamburger cursor-pointer none-desktop'>
+    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 3H14V4H2V3Z" fill="black" />
+      <path d="M2 12H14V13H2V12Z" fill="black" />
+      <path d="M2 6H14V7H2V6Z" fill="black" />
+      <path d="M2 9H14V10H2V9Z" fill="black" />
+    </svg>
+  </span>
+  
+  <span class="text-big font-staat">L</span>
+  
+
+  <menu class="none-phone">
+    
+    
+    <div><a class="text-secondary">Home</a></div>
+    
+    
+    
+    <div><a href="/blog" class="">Blog</a></div>
+    
+    
+    
+    <div><a href="/about" class="">About</a></div>
+    
+    
+  </menu>
+</header>
+
+<menu type="toolbar" class="backdrop-blur w-full none-desktop" id="menu-mobile" hidden>
+  <header class="backdrop-blur navbar">
+    <span class='hamburger cursor-pointer'>
+      <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 3H14V4H2V3Z" fill="black" />
+        <path d="M2 12H14V13H2V12Z" fill="black" />
+        <path d="M2 6H14V7H2V6Z" fill="black" />
+        <path d="M2 9H14V10H2V9Z" fill="black" />
+      </svg>
+    </span>
+    <span>Menu</span>
+  </header>
+
+  <ul class="menu-list">
+    
+    
+    <li><a class="text-secondary pure-menu-link">Home</a></li>
+    
+    
+    
+    <li><a href="/blog" class="pure-menu-link ">Blog</a></li>
+    
+    
+    
+    <li><a href="/about" class="pure-menu-link ">About</a></li>
+    
+    
+  </ul>
+</menu>
+
+<script>
+  const toggleEl = (ev) => {
+    const menuMobile = document.getElementById('menu-mobile');
+    menuMobile.hidden = !menuMobile.hidden
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    Array.from(document.getElementsByClassName('hamburger'))
+      .forEach(el => el.addEventListener('click', toggleEl))
+  })
+</script>
+        <div class="content">
+        
+          <p>HELLO</p>
+
+        </div>
+    </main>
+  </body>
+
+</html>

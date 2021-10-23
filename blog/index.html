@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en"><title>LEHS's web</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/assets/css/styles.css"><body>
+    <main class="page-content " aria-label="Content"><header class="backdrop-blur navbar">
+  <span class='hamburger cursor-pointer none-desktop'>
+    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 3H14V4H2V3Z" fill="black" />
+      <path d="M2 12H14V13H2V12Z" fill="black" />
+      <path d="M2 6H14V7H2V6Z" fill="black" />
+      <path d="M2 9H14V10H2V9Z" fill="black" />
+    </svg>
+  </span>
+  
+  <span>Blog</span>
+  
+
+  <menu class="none-phone">
+    
+    
+    <div><a href="/" class="">Home</a></div>
+    
+    
+    
+    <div><a class="text-secondary">Blog</a></div>
+    
+    
+    
+    <div><a href="/about" class="">About</a></div>
+    
+    
+  </menu>
+</header>
+
+<menu type="toolbar" class="backdrop-blur w-full none-desktop" id="menu-mobile" hidden>
+  <header class="backdrop-blur navbar">
+    <span class='hamburger cursor-pointer'>
+      <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 3H14V4H2V3Z" fill="black" />
+        <path d="M2 12H14V13H2V12Z" fill="black" />
+        <path d="M2 6H14V7H2V6Z" fill="black" />
+        <path d="M2 9H14V10H2V9Z" fill="black" />
+      </svg>
+    </span>
+    <span>Menu</span>
+  </header>
+
+  <ul class="menu-list">
+    
+    
+    <li><a href="/" class="pure-menu-link text-dark">Home</a></li>
+    
+    
+    
+    <li><a class="text-secondary pure-menu-link">Blog</a></li>
+    
+    
+    
+    <li><a href="/about" class="pure-menu-link text-dark">About</a></li>
+    
+    
+  </ul>
+</menu>
+
+<script>
+  const toggleEl = (ev) => {
+    const menuMobile = document.getElementById('menu-mobile');
+    menuMobile.hidden = !menuMobile.hidden
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    Array.from(document.getElementsByClassName('hamburger'))
+      .forEach(el => el.addEventListener('click', toggleEl))
+  })
+</script>
+        <div class="content">
+        
+          <br />
+<br />
+
+<div class="d-flex justify-center gap-small">
+    
+    <a class="badge " href="/blog/nose">nose</a>
+    
+    <a class="badge " href="/blog/sise">sise</a>
+    
+</div>
+
+<br />
+<br />
+
+
+<div class="bg-thirty p-2 mb-4">
+<a href="/nose/2021/04/08/test1-copy.html">
+    <h2 class="my-0 underline:hover text-dark">nose 4</h2>
+</a>
+    <small class="post-date">8/2021</small>
+<p><small> <p>adijasofjosafjsa</p>
+
+ </small></p>
+
+</div>
+
+
+<div class="bg-thirty p-2 mb-4">
+<a href="/nose/2021/04/10/welcome-to-jekyll-copy-2.html">
+    <h2 class="my-0 underline:hover text-dark">nose</h2>
+</a>
+    <small class="post-date">10/2021</small>
+<p><small> <p>adijasofjosafjsa</p>
+
+ </small></p>
+
+</div>
+
+
+<div class="bg-thirty p-2 mb-4">
+<a href="/sise/2021/04/10/test1.html">
+    <h2 class="my-0 underline:hover text-dark">nose 1</h2>
+</a>
+    <small class="post-date">10/2021</small>
+<p><small> <p>sise</p>
+
+ </small></p>
+
+</div>
+
+
+<div class="bg-thirty p-2 mb-4">
+<a href="/nose/2021/04/11/test1-copy-3.html">
+    <h2 class="my-0 underline:hover text-dark">nose 3</h2>
+</a>
+    <small class="post-date">11/2021</small>
+<p><small> <p>adijasofjosafjsa</p>
+
+ </small></p>
+
+</div>
+
+
+<div class="bg-thirty p-2 mb-4">
+<a href="/nose/2021/07/10/test1-copy-2.html">
+    <h2 class="my-0 underline:hover text-dark">nose 2</h2>
+</a>
+    <small class="post-date">10/2021</small>
+<p><small> <p>adijasofjosafjsa</p>
+
+ </small></p>
+
+</div>
+
+
+
+
+
+        </div>
+    </main>
+  </body>
+
+</html>
